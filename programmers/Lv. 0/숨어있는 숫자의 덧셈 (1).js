@@ -6,5 +6,16 @@
 // my_string은 소문자, 대문자 그리고 한자리 자연수로만 구성되어있습니다.
 
 function solution(my_string) {
-
+    let answer = 0;
+    let str = my_string.split('');
+    let str2 = [];
+    for(let i = 0; i < str.length; i++){
+        if(str[i] >= 0 && str[i] <= 9){
+            str2.push(str[i]);
+        }
+    }
+    for(let i = 0; i < str2.length; i++){
+        answer += parseInt(str2[i]);
+    }
+    return answer;
 }
